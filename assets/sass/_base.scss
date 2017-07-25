@@ -1,0 +1,28 @@
+/* assets/sass/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 10px;
+  background: $color-bg;
+}
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.emoji-pic {
+  float: left;
+  margin: 10px;
+}
+.emoji-pic:nth-of-type(even) {
+  float: right;
+}
+.rollo {
+  display: block;
+}
+.verse  {
+  margin-top: 1em;
+  text-align: center;
+}

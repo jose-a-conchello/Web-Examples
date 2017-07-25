@@ -1,0 +1,59 @@
+/* assets/sass/modules/_reset.scss */
+html, body, ul, ol, li, dt, dd, #{headings(2,6)}, p,
+code {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+#{headings()}{
+  font-weight: bold;
+}
+
+// To undo some settings that bootstrap does
+// import after the bootstrap 
+
+$font-family-main:  times, 'times new roman', serif !default;
+$font-size-normalize-jac: 16px !default;  
+html, body {
+  font-family: $font-family-main;
+  font-size: $font-size-normalize-jac;
+  line-height: normal;
+}
+h1 {
+  font-size: 2 * $font-size-normalize-jac;
+}
+h2  {
+  font-size: 1.5 * $font-size-normalize-jac;
+}
+h3  {
+  font-size: 1.17 * $font-size-normalize-jac;
+}
+h4 {
+  font-size:  $font-size-normalize-jac;
+}
+#{headings(5,6)} {
+  font-size: 0.83 * $font-size-normalize-jac;
+}
+code {
+  font-size: 0.8125 * $font-size-normalize-jac;
+  font-family: monospace;
+  line-height: 1em;
+  padding-top: 0; 
+  padding-botton: 0;
+  color: inherit;
+  background-color: transparent;
+  p {
+    font-family: inherit;
+  }
+}
+a {
+  color: rgb(0,0,238);
+  text-decoration: initial;
+  &:visited {
+    color: rgb(82,0,138);
+  }
+}
+caption {
+  font-family: initial;
+  color: initial;
+}

@@ -1,0 +1,104 @@
+/* assets/sass/modules/_generics.scss */
+// default in case this partial is used w/o importing '_variables.scss'
+$indentation: 2em !default;
+.indented {
+  margin-left: $indentation;
+}
+.exdented {
+  margin-left: $indentation;
+  text-indent: -$indentation;
+}
+.define-term {
+  font-style: italic;
+}
+.nobull {
+  list-style: none;
+}
+hr {
+  margin: 10px auto;
+  border-top-style: none;
+  border-bottom-style: inset;
+  border-width: 1px;
+  border-color: black;
+  &.short{
+    width: 50%;
+  }
+}
+// avoid confusion w 'clearfix' class in bootstrap, use a different name
+.clear-fix { // there is also a clear-fix mixin in my _mixins.scss 
+  &::before, &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+  zoom: 1; // needed for IE V 6 & 7
+}
+.summary-list {
+  margin-top: 0;
+  > dt {
+    margin-top: 0.5em;
+    font-weight: normal;
+    &:first-child {
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+  > dd {
+    margin-left: $indentation;
+  }
+}
+.pp { // mimic nroff/troff 'pp': Indent 1st line, some space above
+  margin-top: 0.7em;
+  text-indent: $indentation;
+}
+.latin { // para latinajos
+  font-style: italic;
+}
+.math-vector {
+  font-weight: bold;
+}
+.framed {
+  border: 1px solid black;
+}
+.no-break {
+  white-space: nowrap;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.side-by-side {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+$border-table: solid black 1px !default;
+table {
+  &.framed {
+    border-collapse: collapse;
+    & td {
+      border: $border-table;
+    }
+    & th {
+      border: solid black 2px;
+    }
+    & th, & td {
+      padding: 0px 5px;
+    }
+  }
+}
+large {
+  font-size: 150%;
+}
+.copyright {
+  padding: 5px 0;
+  margin: 10px auto;
+  line-height: 3em;
+  & > p {
+    margin-top: 1em;
+  }
+}

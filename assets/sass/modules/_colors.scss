@@ -1,0 +1,24 @@
+/* assets/sass/modules/_colors.scss */
+
+// Naming colors improves readability
+$offwhite:  #F5F2E8;;
+$darkblue:  #022933;
+$yellow:    #FFBA00;
+$brightyellow: #FFFF00;
+$blue:      #0076A3;
+$green:     #548C27;
+$orange:    #F39856;
+$red:       #D14348;
+$purple:    #6D73C2;
+$burgundy:  #800020;
+$ice-blue:  #D4F0FF;
+$sepia:     #704215;
+$indigo:    #4B0082;
+$violet:    #EE82EE;
+
+$light-green: scale_lightness($green, 60%);
+$pink: scale_lightness($red, 70%);
+
+$rainbow-colors: 
+  $red, $orange, $yellow, $green, $blue, $indigo, $violet;
+

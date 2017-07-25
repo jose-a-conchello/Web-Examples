@@ -1,0 +1,18 @@
+/* assets/sass/_variables.scss */
+
+@import "modules/colors";
+// Naming colors improves readability
+// Using color names instead of hex or decimal helps readability
+$color-bg: $offwhite;;
+$color-text: $darkblue;
+$color-vino: $burgundy;
+
+$indentation: 2em;
+$color-nav-quickref: $light-green;
+
+$border-table: solid black 1px;
+
+$margin-ruler: 10px auto;
+
+$font-family-main:  times, 'times new roman', serif;
+$font-size-normalize-jac: 16px;

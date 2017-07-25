@@ -1,0 +1,241 @@
+/* assets/sass/style.scss */
+/* assets/sass/modules/_reset.scss */
+html, body, ul, ol, li, dt, dd, h2, h3, h4, h5, h6, p,
+code {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+html, body {
+  font-family: times, "times new roman", serif;
+  font-size: 16px;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18.72px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5, h6 {
+  font-size: 13.28px;
+}
+
+code {
+  font-size: 13px;
+  font-family: monospace;
+  line-height: 1em;
+  padding-top: 0;
+  padding-botton: 0;
+  color: inherit;
+  background-color: transparent;
+}
+code p {
+  font-family: inherit;
+}
+
+a {
+  color: #0000ee;
+  text-decoration: initial;
+}
+a:visited {
+  color: #52008a;
+}
+
+caption {
+  font-family: initial;
+  color: initial;
+}
+
+/* assets/sass/_variables.scss */
+/* assets/sass/modules/_colors.scss */
+/* assets/sass/modules/_generics.scss */
+.indented {
+  margin-left: 2em;
+}
+
+.exdented {
+  margin-left: 2em;
+  text-indent: -2em;
+}
+
+.define-term {
+  font-style: italic;
+}
+
+.nobull {
+  list-style: none;
+}
+
+hr {
+  margin: 10px auto;
+  border-top-style: none;
+  border-bottom-style: inset;
+  border-width: 1px;
+  border-color: black;
+}
+hr.short {
+  width: 50%;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+.clear-fix::before, .clear-fix::after {
+  content: "";
+  display: table;
+}
+.clear-fix::after {
+  clear: both;
+}
+
+.summary-list {
+  margin-top: 0;
+}
+.summary-list > dt {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+.summary-list > dt:first-child {
+  margin-top: 0;
+  padding: 0;
+}
+.summary-list > dd {
+  margin-left: 2em;
+}
+
+.pp {
+  margin-top: 0.7em;
+  text-indent: 2em;
+}
+
+.latin {
+  font-style: italic;
+}
+
+.math-vector {
+  font-weight: bold;
+}
+
+.framed {
+  border: 1px solid black;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.side-by-side {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+table.framed {
+  border-collapse: collapse;
+}
+table.framed td {
+  border: solid black 1px;
+}
+table.framed th {
+  border: solid black 2px;
+}
+table.framed th, table.framed td {
+  padding: 0px 5px;
+}
+
+large {
+  font-size: 150%;
+}
+
+.copyright {
+  padding: 5px 0;
+  margin: 10px auto;
+  line-height: 3em;
+}
+.copyright > p {
+  margin-top: 1em;
+}
+
+/* assets/sass/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 10px;
+  background: #F5F2E8;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.emoji-pic {
+  float: left;
+  margin: 10px;
+}
+
+.emoji-pic:nth-of-type(even) {
+  float: right;
+}
+
+.rollo {
+  display: block;
+}
+
+.verse {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* 
+  Where to place:
+    typography: 
+      Before variables:
+        Allows defining variables that use the fonts in
+        typography. However, it prevents the use of variables in
+        the typography partial. Using variables is necessary when,
+        for example, different classes and/or elements use equal
+        properties such as font-size, font-weight, ...
+      After variables: 
+        Allows using variables in the typography partial. However,
+        it prevents the use of variables for the fonts in the
+        typography partial.
+      Within variables: 
+        Ruins the separation of partials by function.
+     
+      Other approach:
+        Keep the typography variables within the typography
+        partial.
+        Use the variables partial for variables that are general
+        in the sense that they are used for more than one purpose.
+      
+
+*/

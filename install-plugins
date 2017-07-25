@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# 1) Comment out the plug-ins that are not needed
+# 2) type
+#   npm init
+# 3) Source this file to install the necessary npm plugins
+
+
+PLUGIN_LIST=
+PLUGIN_LIST+=" bootstrap-sass "
+PLUGIN_LIST+=" gulp "
+PLUGIN_LIST+=" gulp-autoprefixer "
+PLUGIN_LIST+=" gulp-compass "
+PLUGIN_LIST+=" gulp-concat "
+PLUGIN_LIST+=" gulp-connect "
+PLUGIN_LIST+=" gulp-if "
+PLUGIN_LIST+=" gulp-uglify "
+PLUGIN_LIST+=" gulp-util "
+PLUGIN_LIST+=" gulp-clean-css "
+PLUGIN_LIST+=" jquery "
+PLUGIN_LIST+=" minimatch "
+PLUGIN_LIST+=" path "
+
+npm install --save-dev $PLUGIN_LIST
+
+tmutil addexclusion node_modules

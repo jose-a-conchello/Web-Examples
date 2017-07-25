@@ -1,0 +1,10 @@
+/* assets/sass/_AlternateFloat_base.scss */
+.side-by-side {
+// // //   border-right: solid black 1px;
+}
+.panel-box {
+  border-right: 1px black solid;
+}
+[class~='panel-box']:last-of-type {
+  border-right: none;
+}

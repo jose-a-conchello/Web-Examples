@@ -1,0 +1,32 @@
+/* assets/sass/style.scss */
+@import "compass";
+
+@import "modules/reset";
+@import "variables"; // variables imports modules/colors
+@import "modules/generics"; // uses definitions from variables partial
+@import "base";
+
+/* 
+  Where to place:
+    typography: 
+      Before variables:
+        Allows defining variables that use the fonts in
+        typography. However, it prevents the use of variables in
+        the typography partial. Using variables is necessary when,
+        for example, different classes and/or elements use equal
+        properties such as font-size, font-weight, ...
+      After variables: 
+        Allows using variables in the typography partial. However,
+        it prevents the use of variables for the fonts in the
+        typography partial.
+      Within variables: 
+        Ruins the separation of partials by function.
+     
+      Other approach:
+        Keep the typography variables within the typography
+        partial.
+        Use the variables partial for variables that are general
+        in the sense that they are used for more than one purpose.
+      
+
+*/
